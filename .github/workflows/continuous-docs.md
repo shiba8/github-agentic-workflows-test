@@ -16,6 +16,10 @@ safe-outputs:
     title-prefix: "[docs] "
     labels: [documentation]
 
+engine:
+  id: copilot
+  model: gpt-4.1
+
 tools:
   github:
 ---
