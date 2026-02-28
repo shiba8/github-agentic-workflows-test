@@ -70,10 +70,6 @@ fn main() {
                 }
             }
         }
-        "count" => {
-            let count = list.list().len();
-            println!("{} todo(s).", count);
-        }
         _ => {
             print_usage();
         }
@@ -88,5 +84,4 @@ fn print_usage() {
     eprintln!("  done <id>     Mark a todo as done");
     eprintln!("  remove <id>   Remove a todo");
     eprintln!("  list          List all todos");
-    eprintln!("  count         Show total number of todos!");
 }
