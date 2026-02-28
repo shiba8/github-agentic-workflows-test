@@ -48,6 +48,10 @@ impl TodoList {
     pub fn list(&self) -> &[Todo] {
         &self.todos
     }
+
+    pub fn clear(&mut self) {
+        self.todos.clear();
+    }
 }
 
 #[cfg(test)]
@@ -105,6 +109,15 @@ mod tests {
     #[test]
     fn test_list_empty() {
         let list = TodoList::new();
+        assert!(list.list().is_empty());
+    }
+
+    #[test]
+    fn test_clear() {
+        let mut list = TodoList::new();
+        list.add("Task 1");
+        list.add("Task 2");
+        list.clear();
         assert!(list.list().is_empty());
     }
 }

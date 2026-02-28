@@ -74,6 +74,10 @@ fn main() {
             let count = list.list().len();
             println!("{}", count);
         }
+        "clear" => {
+            list.clear();
+            println!("All todos cleared.");
+        }
         _ => {
             print_usage();
         }
